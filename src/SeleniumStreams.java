@@ -8,7 +8,7 @@ import java.util.List;
 
 public class SeleniumStreams {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "E://Documents//Selenium Java Course//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Dev_Tools/chromedriver_win32/chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
 
@@ -25,20 +25,20 @@ public class SeleniumStreams {
         */
 
         //Step 1:
-        WebElement nameCol = driver.findElement(By.xpath("//th[contains(@aria-label, 'Veg/fruit name')]"));
-        nameCol.click();
+      //  WebElement nameCol = driver.findElement(By.xpath("//th[contains(@aria-label, 'Veg/fruit name')]"));
+        //nameCol.click();
 
         //Step 2:
-        List<WebElement> namesList = driver.findElements(By.xpath("//tbody/tr/td[1]"));
+      //  List<WebElement> namesList = driver.findElements(By.xpath("//tbody/tr/td[1]"));
 
         //Step 3:
-        List<String> namesOriginal = namesList.stream().map(WebElement::getText).toList();
+      //  List<String> namesOriginal = namesList.stream().map(WebElement::getText).toList();
 
         //Step 4:
-        List<String> namesSorted = namesOriginal.stream().sorted().toList();
+      //  List<String> namesSorted = namesOriginal.stream().sorted().toList();
 
         //Step 5:
-        Assert.assertEquals(namesOriginal, namesSorted);
+       // Assert.assertEquals(namesOriginal, namesSorted);
 
         driver.quit();
     }
