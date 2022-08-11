@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class Scope {
     public static void main(String[] args) {
         //driver location system property
-        System.setProperty("webdriver.chrome.driver", "E://Documents//Selenium Java Course//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Dev_Tools/chromedriver_win32/chromedriver.exe");
 
         //driver object
         WebDriver driver = new ChromeDriver();
